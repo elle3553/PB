@@ -1,0 +1,144 @@
+﻿@page
+@model AdminModel
+@{
+    ViewData["Title"] = "Admin's Interface";
+}
+
+<head>
+    <style>
+
+        body {
+            background-image: url("signupBG.svg");
+            background-size: 1350px;
+        }
+
+        .form {
+            width: 400px;
+            height: 500px;
+            background: linear-gradient(to top, rgba(255,255,255,0.1)50%, rgba(255,255,255,0.1)50%);
+            position: absolute;
+            left: 550px;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 120px;
+        }
+
+            .form h2 {
+                width: 350px;
+                font-family: 'Creepster', cursive;
+                text-align: center;
+                color: #ff9f10;
+                font-size: 60px;
+                border-radius: 10px;
+                padding: 8px;
+                text-shadow: 2px 2px 5px #fff;
+                margin-top: 30px;
+            }
+
+            .form input {
+                width: 280px;
+                height: 20px;
+                background: transparent;
+                border-bottom: 1px solid #ff9f10;
+                border-top: none;
+                border-right: none;
+                border-left: none;
+                color: #fff;
+                font-size: 14px;
+                letter-spacing: 1px;
+                margin-top: 10px;
+                margin-left: 35px;
+                font-family: sans-serif;
+                position: center;
+            }
+
+                .form input:focus {
+                    outline: none;
+                }
+
+        ::placeholder {
+            color: #a6a6a6;
+            font-family: Arial, Helvetica, sans-serif;
+            position: center;
+        }
+
+        .form select {
+            width: 280px;
+            height: 30px;
+            padding: 8px;
+            border: 1px solid #ff9f10;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            color: #a6a6a6;
+            margin-top: 20px;
+            margin-left: 35px;
+        }
+
+            .form select:focus {
+                outline: none;
+                border-color: #ff9f10;
+                box-shadow: 0 0 5px #4d90fe;
+                color: black;
+            }
+
+        checkbox {
+            margin-top: 50px;
+            margin-left: 35px;
+        }
+
+        span {
+            color: #ff9f10;
+            font-size: 14px;
+            font-family: cursive;
+            position: absolute;
+            left: 60px;
+            margin-top: 12px;
+            margin-left: 30px;
+        }
+
+        .signup {
+            width: 280px;
+            height: 40px;
+            background: #ff9f10;
+            border: none;
+            margin-top: 20px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            color: #fff;
+            transition: 0.4s ease;
+            position: center;
+            margin-left: 35px;
+        }
+
+            .signup:hover {
+                background: #fff;
+                color: #ff9f10;
+            }
+
+            .signup a {
+                text-decoration: none;
+                color: #000;
+                font-weight: bold;
+            }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form">
+        <h2>Sign Up</h2>
+        <input type="text" name="firstname" placeholder="First Name" required />
+        <input type="text" name="lastname" placeholder="Last Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <input type="password" name="retype" placeholder="Re-type Password" required />
+        <select name="option" id="option">
+            <option value="student">Student</option>
+            <option value="admin">Admin</option>
+            <option value="select" selected disabled>Sign up for</option>
+        </select>
+        <input type="checkbox" name="t&c" /><span>I agree to the terms & conditions</span>
+        <button class="signup"><a href="http://localhost:5005">Sign Up</a></button>
+    </div>
+</body>

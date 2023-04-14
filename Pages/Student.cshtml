@@ -1,0 +1,106 @@
+﻿@page
+@model StudentModel
+@{
+    ViewData["Title"] = "Student's Interface";
+}
+
+<head>
+    <style>
+
+        video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: 1780px;
+            height: 820px;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .form {
+            width: 320px;
+            height: 530px;
+            background: linear-gradient(to top, rgba(255,255,255,0.1)50%, rgba(255,255,255,0.1)50%);
+            position: absolute;
+            left: 550px;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 60px;
+        }
+
+            .form h2 {
+                width: 260px;
+                font-family: 'Creepster', cursive;
+                text-align: center;
+                color: #ff9f10;
+                font-size: 60px;
+                border-radius: 10px;
+                margin: 2px;
+                padding: 8px;
+                text-shadow: 2px 2px 5px #fff
+            }
+
+            .form input {
+                width: 240px;
+                height: 35px;
+                background: transparent;
+                border-bottom: 1px solid #ff9f10;
+                border-top: none;
+                border-right: none;
+                border-left: none;
+                color: #fff;
+                font-size: 14px;
+                letter-spacing: 1px;
+                margin-top: 30px;
+                font-family: sans-serif;
+                margin-left: 20px;
+            }
+
+                .form input:focus {
+                    outline: none;
+                }
+
+        ::placeholder {
+            color: #a6a6a6;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .form button {
+            width: 240px;
+            height: 40px;
+            background: #ff9f10;
+            border: none;
+            margin-top: 30px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            color: #fff;
+            transition: 0.4s ease;
+            margin-left: 20px;
+        }
+
+            .form button:hover {
+                background: #fff;
+                color: #ff9f10;
+            }
+
+            .form button a {
+                text-decoration: none;
+                color: #000;
+                font-weight: bold;
+            }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="studentBG.mp4" type="video/mp4">
+    </video>
+    <div class="form">
+        <h2>Track Your Parcel</h2>
+        <input type="text" name="trackingno" placeholder="Tracking number:" required />
+        <button onclick="alert('Your parcel status: ')">Check Status</button>
+    </div>
+</body>

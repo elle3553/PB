@@ -1,0 +1,164 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<head>
+    <style>
+
+        body {
+            background-image: url("homeBG.svg");
+            background-size: 1400px;
+        }
+
+        .form {
+            width: 320px;
+            height: 530px;
+            background: linear-gradient(to top, rgba(255,255,255,0.1)50%, rgba(255,255,255,0.1)50%);
+            position: absolute;
+            left: 993px;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 60px;
+        }
+
+            .form h2 {
+                width: 260px;
+                font-family: 'Creepster', cursive;
+                text-align: center;
+                color: #ff9f10;
+                font-size: 60px;
+                border-radius: 10px;
+                margin: 2px;
+                padding: 8px;
+                text-shadow: 2px 2px 5px #fff
+            }
+
+            .form p {
+                font-family: cursive;
+                text-align: center;
+                color: #a6a6a6;
+            }
+
+            .form input {
+                width: 240px;
+                height: 35px;
+                background: transparent;
+                border-bottom: 1px solid #ff9f10;
+                border-top: none;
+                border-right: none;
+                border-left: none;
+                color: #fff;
+                font-size: 14px;
+                letter-spacing: 1px;
+                margin-top: 30px;
+                font-family: sans-serif;
+                margin-left: 20px;
+            }
+
+                .form input:focus {
+                    outline: none;
+                }
+
+        ::placeholder {
+            color: #a6a6a6;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .forgot {
+            margin-top: 20px;
+            color: #a6a6a6;
+            cursor: pointer;
+            text-align: center;
+            font-size: 12px;
+            margin-left: 20px;
+        }
+
+            .forgot:hover {
+                text-decoration: underline;
+            }
+
+        .form select {
+            width: 240px;
+            height: 40px;
+            padding: 8px;
+            border: 1px solid #ff9f10;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            color: #a6a6a6;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+            .form select:focus {
+                outline: none;
+                border-color: #ff9f10;
+                box-shadow: 0 0 5px #4d90fe;
+                color: black;
+            }
+
+        .login {
+            width: 240px;
+            height: 40px;
+            background: #ff9f10;
+            border: none;
+            margin-top: 30px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            color: #fff;
+            transition: 0.4s ease;
+            margin-left: 20px;
+        }
+
+            .login:hover {
+                background: #fff;
+                color: #ff9f10;
+            }
+
+            .login a {
+                text-decoration: none;
+                color: #000;
+                font-weight: bold;
+            }
+
+        .signup {
+            margin-top: 25px;
+            text-align: center;
+            font-size: 12px;
+            color: #a6a6a6;
+            margin-left: 10px;
+        }
+
+            .signup a {
+                color: #ff9f10;
+                text-decoration: none;
+            }
+
+                .signup a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form">
+        <h2>Welcome</h2>
+        <p>Sign in to continue</p>
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <div class="forgot">Forgot Password?</div>
+        <select name="option" id="option">
+            <option value="student">Student</option>
+            <option value="admin">Admin</option>
+            <option value="select" selected disabled>Login for</option>
+        </select>
+        <button class="login"><a href="#">Login</a></button>
+        <div class="signup">New to ParcelBusters? <a href="http://localhost:5005/SU">Sign Up</a> now!</div>
+    </div>
+</body>
+
+
+
